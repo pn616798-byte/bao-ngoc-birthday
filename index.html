@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gửi Bảo Ngọc 🌷</title>
 
-
 <style>
-
-/* =========================
-   CÀI ĐẶT CHUNG
-========================= */
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -28,300 +17,135 @@ html{
 }
 
 body{
-
     font-family:"Times New Roman",serif;
-
     color:#514652;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff3f8,
-            #edf7ff,
-            #fff8fc
-        );
-
+    background:linear-gradient(
+        135deg,
+        #fff3f8,
+        #edf7ff,
+        #fff8fc
+    );
     overflow-x:hidden;
 }
 
-
-/* nền chấm nhỏ */
-
 body::before{
-
     content:"";
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     opacity:.25;
-
     background-image:
-
-        radial-gradient(
-            #f3a9c5 1px,
-            transparent 1px
-        ),
-
-        radial-gradient(
-            #9bcde9 1px,
-            transparent 1px
-        );
-
-    background-size:
-        35px 35px,
-        50px 50px;
-
-    background-position:
-        0 0,
-        20px 15px;
-
+        radial-gradient(#f3a9c5 1px,transparent 1px),
+        radial-gradient(#9bcde9 1px,transparent 1px);
+    background-size:35px 35px,50px 50px;
+    background-position:0 0,20px 15px;
 }
-
-
-/* =========================
-   TRANG MỞ ĐẦU
-========================= */
 
 .hero{
-
     min-height:100vh;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:25px;
-
 }
-
 
 .hero-box{
-
     width:min(900px,100%);
-
     padding:60px 30px;
-
     text-align:center;
-
-    background:
-        rgba(255,255,255,.78);
-
-    border:
-        1px solid white;
-
+    background:rgba(255,255,255,.78);
+    border:1px solid white;
     border-radius:35px;
-
-    box-shadow:
-        0 25px 70px
-        rgba(130,150,180,.20);
-
-    backdrop-filter:
-        blur(12px);
-
+    box-shadow:0 25px 70px rgba(130,150,180,.20);
+    backdrop-filter:blur(12px);
 }
-
 
 .small-title{
-
     color:#9693bd;
-
     letter-spacing:6px;
-
     font-size:15px;
-
 }
-
 
 h1{
-
     margin-top:18px;
-
-    font-size:
-        clamp(55px,10vw,105px);
-
+    font-size:clamp(55px,10vw,105px);
     font-weight:400;
-
     color:#d778a5;
-
 }
-
 
 .years{
-
     margin-top:5px;
-
-    font-size:
-        clamp(30px,5vw,55px);
-
+    font-size:clamp(30px,5vw,55px);
     color:#78a3c8;
-
 }
-
 
 .hero-text{
-
     max-width:650px;
-
     margin:25px auto;
-
     font-size:20px;
-
     line-height:1.7;
-
 }
-
 
 .button{
-
     display:inline-block;
-
     margin-top:15px;
-
-    padding:
-        13px 28px;
-
+    padding:13px 28px;
     color:white;
-
     text-decoration:none;
-
     background:#eca9c8;
-
     border-radius:50px;
-
-    box-shadow:
-        0 10px 25px
-        rgba(230,150,185,.30);
-
-    transition:.3s;
-
+    box-shadow:0 10px 25px rgba(230,150,185,.30);
 }
-
-
-.button:hover{
-
-    transform:
-        translateY(-3px);
-
-}
-
-
-/* =========================
-   PHẦN NỘI DUNG
-========================= */
 
 main{
-
     width:min(1000px,92%);
-
     margin:auto;
-
 }
-
 
 section{
-
     padding:80px 0;
-
 }
-
 
 .section-title{
-
     text-align:center;
-
     font-size:40px;
-
     font-weight:400;
-
     color:#c8739f;
-
     margin-bottom:15px;
-
 }
-
 
 .section-description{
-
     text-align:center;
-
     max-width:700px;
-
-    margin:
-        0 auto 35px;
-
+    margin:0 auto 35px;
     font-size:19px;
-
     line-height:1.7;
-
     color:#777b8e;
-
 }
-
-
-/* =========================
-   CÂU QUOTE
-========================= */
 
 .quote{
-
-    padding:
-        55px 20px;
-
+    padding:55px 20px;
     text-align:center;
-
-    font-size:
-        clamp(27px,5vw,48px);
-
+    font-size:clamp(27px,5vw,48px);
     line-height:1.45;
-
     color:#c86d9c;
-
 }
-
-
-/* =========================
-   ẢNH KỶ NIỆM
-========================= */
 
 .memories{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(220px,1fr)
-        );
-
+    grid-template-columns:repeat(2,1fr);
     gap:22px;
-
 }
-
 
 .memory{
-
     padding:15px;
-
-    background:
-        rgba(255,255,255,.82);
-
+    background:rgba(255,255,255,.82);
     border-radius:25px;
-
-    box-shadow:
-        0 15px 40px
-        rgba(140,150,180,.15);
-
+    box-shadow:0 15px 40px rgba(140,150,180,.15);
 }
 
-
 .photo{
-    height:260px;
+    height:330px;
     border-radius:20px;
     overflow:hidden;
     background:#f8d5e5;
@@ -334,540 +158,272 @@ section{
     object-fit:cover;
 }
 
-
 .memory-text{
-
-    padding:
-        17px 5px 5px;
-
+    padding:17px 5px 5px;
     text-align:center;
-
     font-size:18px;
-
     line-height:1.6;
-
 }
-
-
-/* =========================
-   LÁ THƯ
-========================= */
 
 .letter{
-
     padding:38px;
-
-    background:
-        rgba(255,255,255,.82);
-
+    background:rgba(255,255,255,.82);
     border-radius:30px;
-
-    box-shadow:
-        0 20px 55px
-        rgba(140,150,180,.15);
-
+    box-shadow:0 20px 55px rgba(140,150,180,.15);
     font-size:20px;
-
     line-height:1.9;
-
 }
-
 
 .letter p{
-
     margin-bottom:22px;
-
 }
-
 
 .highlight{
-
     color:#c65e91;
-
     font-weight:bold;
-
 }
-
-
-/* =========================
-   PHẦN CUỐI
-========================= */
 
 .final{
-
     min-height:70vh;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-align:center;
-
 }
-
 
 .final h2{
-
-    font-size:
-        clamp(38px,7vw,78px);
-
+    font-size:clamp(38px,7vw,78px);
     font-weight:400;
-
     color:#c45c90;
-
 }
-
 
 .final p{
-
     max-width:750px;
-
     margin:25px auto;
-
     font-size:21px;
-
     line-height:1.8;
-
 }
-
-
-/* =========================
-   MƯA TRÁI TIM
-========================= */
 
 .hearts{
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     overflow:hidden;
-
     z-index:50;
-
 }
-
 
 .heart{
-
     position:absolute;
-
     top:-30px;
-
-    animation:
-        fall linear forwards;
-
+    animation:fall linear forwards;
     opacity:.8;
-
 }
 
-
 @keyframes fall{
-
     0%{
-
-        transform:
-            translateY(-30px)
-            rotate(0deg);
-
+        transform:translateY(-30px) rotate(0deg);
         opacity:.9;
-
     }
 
     100%{
-
-        transform:
-            translateY(110vh)
-            rotate(360deg);
-
+        transform:translateY(110vh) rotate(360deg);
         opacity:0;
-
     }
-
 }
-
-
-/* =========================
-   HIỆU ỨNG HIỆN DẦN
-========================= */
-
-.reveal{
-
-    opacity:0;
-
-    transform:
-        translateY(30px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-
-}
-
-
-.reveal.show{
-
-    opacity:1;
-
-    transform:
-        translateY(0);
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    text-align:center;
-
-    padding:40px 20px;
-
-    color:#999;
-
-    font-size:16px;
-
-}
-
-
-/* =========================
-   ĐIỆN THOẠI
-========================= */
 
 @media(max-width:600px){
 
     .hero-box{
-
-        padding:
-            45px 20px;
-
+        padding:45px 20px;
     }
-
 
     .hero-text{
-
         font-size:18px;
-
     }
 
-
-    .letter{
-
-        padding:23px;
-
-        font-size:18px;
-
+    .memories{
+        grid-template-columns:1fr;
     }
-
 
     .photo{
-
-        height:230px;
-
+        height:300px;
     }
 
+    .letter{
+        padding:23px;
+        font-size:18px;
+    }
 }
-
 </style>
-
 </head>
-
-
 
 <body>
 
-
-<!-- MƯA TRÁI TIM -->
-
-<div
-    class="hearts"
-    id="hearts">
-</div>
-
-
-
-<!-- =========================
-     PHẦN MỞ ĐẦU
-========================= -->
+<div class="hearts" id="hearts"></div>
 
 <header class="hero">
 
-<div class="hero-box reveal">
-
+<div class="hero-box">
 
 <div class="small-title">
-
 GỬI BẢO NGỌC
-
 </div>
 
-
-<h1>
-
-For you,
-
-</h1>
-
+<h1>For you,</h1>
 
 <div class="years">
-
 3 years of us
-
 </div>
 
-
 <p class="hero-text">
-
 Một góc nhỏ để giữ lại những ngày tháng
 tụi mình đã cùng nhau đi qua,
 và để chúc cô gái tuổi 20 của tao
 một tuổi mới thật rạng rỡ. 🌷
-
 </p>
 
-
-<a
-    href="#three-years"
-    class="button">
-
+<a href="#three-years" class="button">
 Mở kỷ niệm ♡
-
 </a>
-
 
 </div>
 
 </header>
 
-
-
 <main>
 
-
-<!-- =========================
-     3 YEARS
-========================= -->
-
-<section
-    id="three-years"
-    class="reveal">
-
+<section id="three-years">
 
 <h2 class="section-title">
-
 Three years
-
 </h2>
 
-
 <p class="section-description">
-
 3 năm — không quá dài,
 nhưng cũng chẳng hề ngắn.
-
 Đủ để tụi mình có thật nhiều
 câu chuyện, tiếng cười,
 nước mắt và những kỷ niệm.
-
 </p>
 
-
 <div class="quote">
-
 “Vậy mà tụi mình đã đồng hành
 qua hơn nửa quãng đường
 Đại học rồi đó.”
-
 </div>
-
 
 </section>
 
 
-
-<!-- =========================
-     KỶ NIỆM
-========================= -->
-
-<section class="reveal">
-
+<section>
 
 <h2 class="section-title">
-
 Những mảnh ký ức
-
 </h2>
 
-
 <p class="section-description">
-
 Một vài khoảnh khắc của tụi mình.
 Sau này nhìn lại chắc sẽ thấy
 hai đứa hồi đó non vãi =)))
-
 </p>
 
 
 <div class="memories">
 
-
-<div class="photo">
-    <img src="ky-niem-01.png" alt="Kỷ niệm 01">
-</div>
-
+<!-- ẢNH 1 -->
 <div class="memory">
 
 <div class="photo">
-    <img src="ky-niem-01.png" alt="Kỷ niệm 01">
+<img src="ky-niem-01.png" alt="Kỷ niệm 01">
 </div>
 
-
 <p class="memory-text">
-
 lần đầu tâm sự về chuyện tình cảm
 của m nè
-
 <br>
-
 hồi này dòm 2 đứa non vãi
-
 </p>
 
 </div>
 
 
-
-<div class="photo">
-    <img src="ky-niem-02.png" alt="Kỷ niệm 02">
-</div>
-
+<!-- ẢNH 2 -->
 <div class="memory">
 
 <div class="photo">
-    <img src="ky-niem-02.png" alt="Kỷ niệm 02">
+<img src="ky-niem-02.png" alt="Kỷ niệm 02">
 </div>
 
-
 <p class="memory-text">
-
 khúc này t trốn m nè,
 cười chết=)))
-
 <br>
-
 “thôi đại ca bỏ đi đại ca”
-
 <br>
-
 bữa đó cười mà nén lại luôn=)))
-
 </p>
 
 </div>
 
 
-
-<div class="photo">
-    <img src="ky-niem-03.png" alt="Kỷ niệm 03">
-</div>
-
+<!-- ẢNH 3 -->
 <div class="memory">
 
 <div class="photo">
-    <img src="ky-niem-03.png" alt="Kỷ niệm 03">
+<img src="ky-niem-03.png" alt="Kỷ niệm 03">
 </div>
 
 <p class="memory-text">
-
 “k say vì men, say vì tình”
-
 <br>
-
 lần đầu của 2 ta
-
 <br>
-
 cưng quá
-
 <br>
-
 đợt này vui xĩu
-
 </p>
 
 </div>
 
 
-
-<div class="photo">
-    <img src="ky-niem-04.png" alt="Kỷ niệm 04">
-</div>
-
+<!-- ẢNH 4 -->
 <div class="memory">
 
 <div class="photo">
-    <img src="ky-niem-04.png" alt="Kỷ niệm 04">
+<img src="ky-niem-04.png" alt="Kỷ niệm 04">
 </div>
 
-
 <p class="memory-text">
-
 “mốt t đem xe lên t chở cho đi chơi”
-
 <br>
-
 t làm được r nè😚
-
 <br>
-
 giỏi đều
-
 </p>
 
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     TÂM SỰ
-========================= -->
-
-<section class="reveal">
-
+<section>
 
 <h2 class="section-title">
-
 Một tâm sự cho tuổi 20
-
 </h2>
 
-
 <p class="section-description">
-
 “Không là những lời hoa mỹ,
 chỉ là một chút chân thành
 t muốn tâm sự với m”
-
 </p>
-
 
 
 <div class="letter">
 
-
 <p>
-
 Tính đến ngày hôm nay là tui vs "mấy người"
 đón 3 cái sinh nhật với nhau rồi đó,
 tuy là đối với người khác thì không quá nhiều
@@ -875,266 +431,167 @@ nhưng với tui là lớn lắm rồi đó.
 Từ khi gặp Bảo Ngọc tui mới biết được
 thế giới này còn có nhiều điều
 và nhiều thứ tui chưa biết lắm.
-
 </p>
 
-
-
 <p>
-
 Ngày đầu gặp "mấy người" tui nghĩ là
 mấy người tiểu thư đỏng đảnh lắm
 nhưng mà không ngờ bà còn khờ hơn tui nữa.
 Xong cái tui rủ bà đi ăn ở Gs á,
 lần đầu có người tâm sự với tui thiệt lòng vậy luôn.
-
 </p>
 
-
-
 <p>
-
 Xong kiếp nạn đầu tiên tui gặp là hư điện thoại,
 xong cũng nhờ bà tui mới liên lạc được
 để nhận điện thoại mới.
-
 </p>
 
-
-
 <p>
-
 Rồi bà cũng là người bạn đầu tiên tui khóc á,
 lúc đó tui suy nghĩ sao mà tự nhiên bà bị đối xử
 như vậy trong khi mình ai cũng non nớt khi mới lên đây.
-
 Tại vì hồi đó tui từng bị ghẻ lạnh
 nên tui hiểu cảm giác đó
 nên tui không muốn bạn tui bị vậy
 xong tui khóc quá trời.
-
 </p>
 
-
-
 <p>
-
 Thời gian trôi nhanh thật,
 ngoảnh đi ngoảnh lại mà tụi mình
 đã đồng hành cùng nhau
 qua biết bao nhiêu chặng đường rồi ha.
-
 Từ lần đầu tiên tụi mình nói chuyện với nhau
 cho đến bây giờ,
 vậy mà đã hơn nửa quảng đường Đại học rồi đó.
-
 </p>
 
-
-
 <p>
-
 3 năm không phải là một khoảng thời gian
 quá dài, nhưng cũng chẳng hề ngắn.
-
 Trong 3 năm ấy,
 tụi mình đã cùng nhau có đủ
 mọi cung bậc cảm xúc:
-
 vui có,
 buồn có,
 giận nhau cũng có.
-
 </p>
-
-
 
 <p class="highlight">
-
 Cảm ơn mày vì suốt những năm qua
 vẫn luôn ở đó.
-
 </p>
 
-
-
 <p>
-
 Cảm ơn vì chưa từng phán xét tao,
 chưa từng bỏ rơi tao,
 và luôn kiên nhẫn lắng nghe
 những điều tao muốn nói,
-
 kể cả những lúc tao chẳng biết
 phải diễn tả cảm xúc
 của mình như thế nào.
-
 </p>
 
-
-
 <p>
-
 KPhụng biết là sau này
 sẽ không bao giờ tìm lại được
 cảm giác này nữa,
-
 vì tương lai chúng ta đều sẽ có
 những mối bận tâm
 và những con đường riêng.
-
 </p>
 
-
-
 <p>
-
 Tụi mình cũng không còn nói chuyện
 với nhau nhiều như trước nữa.
-
 Nhưng tao vẫn mong rằng,
 dù thời gian có trôi thêm bao lâu,
 vị trí của tụi mình trong lòng nhau
 vẫn sẽ không thay đổi.
-
 </p>
 
-
-
 <p>
-
 Cái miệng t hay chửi vậy thôi
 chứ t chưa bao giờ là có ác ý
 anh ghét bỏ gì m đâu.
-
 </p>
 
-
-
 <p>
-
 Vì t trân trọng từng khoảng khắc,
 từng kỉ niệm chúng ta có với nhau.
-
 Chơi với m t học được nhiều thứ lắm:
-
 sự nhẫn nại,
 kiên cường,
 nổ lực
 và không ngừng bỏ cuộc.
-
 </p>
 
-
-
 <p>
-
 Có những chuyện có thể rồi sẽ quên,
 có những ngày tháng rồi sẽ trở thành quá khứ,
-
 nhưng tao nghĩ mình vẫn sẽ luôn nhớ rằng
 đã từng có một người bạn đồng hành
 cùng mình qua một đoạn thanh xuân thật dài.
-
 </p>
 
-
-
 <p>
-
 Mong tuổi mới của mày luôn bình yên,
 thật nhiều sức khỏe,
 thật nhiều niềm vui,
-
 và những điều mày đang cố gắng hôm nay
 rồi sẽ có ngày trở thành hiện thực.
-
 </p>
 
-
-
 <p>
-
 Mong mày luôn đủ mạnh mẽ để bước tiếp,
 nhưng cũng đủ dịu dàng với chính mình
 khi mệt mỏi.
-
 </p>
-
-
 
 <p>
-
 Và lời cuối cùng,
 tao chỉ muốn mày nhớ rằng:
-
 dù sau này tụi mình có đi đến đâu,
 cuộc sống có thay đổi như thế nào,
-
 tao vẫn sẽ luôn ở đây.
-
 Vẫn trọn vẹn,
 vẫn thương mày,
-
 như cách tao đã thương mày
 từ những ngày đầu tiên.
-
 </p>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     TUỔI 20
-========================= -->
-
-<section class="final reveal">
-
+<section class="final">
 
 <div>
 
-
 <h2>
-
 TRƯƠNG BẢO NGỌC
-
 <br>
-
 LÀ DUY NHẤT TRÊN ĐỜI
-
 </h2>
 
-
-
 <p>
-
 Chúc mừng Trương Bảo Ngọc
 đón tuổi 20 thật rạng rỡ 🌷🎂
-
 <br><br>
-
 Chúc cho cô gái tuổi 20 của tao
 luôn được yêu thương,
 luôn hạnh phúc,
-
 và luôn gặp được những điều
 thật dịu dàng
 trên hành trình phía trước.
-
 </p>
-
-
 
 <p>
 
 <strong>
-
 Đừng bỏ cuộc.
-
 </strong>
 
 <br>
@@ -1149,19 +606,12 @@ Tương lai tươi sáng,
 
 </p>
 
-
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     ĐOẠN KẾT
-========================= -->
-
-<section class="quote reveal">
-
+<section class="quote">
 
 “Không biết khi m đọc
 m có cảm động không
@@ -1174,137 +624,57 @@ rưng rưng, bồn chồn luôn đó”
 “Ê má, vậy mà t với m
 quen nhau được từng ấy năm rồi đó trời”
 
-
 </section>
-
 
 </main>
 
 
-
 <footer>
-
 Made with love, for Bảo Ngọc 🌷
-
 </footer>
-
 
 
 <script>
 
-
-/* =========================
-   HIỆU ỨNG XUẤT HIỆN
-========================= */
-
-const observer =
-
-new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target
-.classList
-.add("show");
-
-}
-
-});
-
-},
-
-{
-    threshold:.12
-}
-
-);
-
-
-document
-.querySelectorAll(".reveal")
-.forEach(el=>
-    observer.observe(el)
-);
-
-
-
-/* =========================
-   MƯA TRÁI TIM
-========================= */
-
 function createHeart(){
 
-const heart =
-document.createElement("span");
-
+const heart=document.createElement("span");
 
 heart.className="heart";
 
-
 const icons=[
-
 "♡",
 "♥",
 "💗",
 "🌷",
 "🍀"
-
 ];
 
+heart.innerHTML=
+icons[Math.floor(Math.random()*icons.length)];
 
-heart.innerHTML =
-
-icons[
-Math.floor(
-Math.random()*icons.length
-)
-];
-
-
-heart.style.left =
-
+heart.style.left=
 Math.random()*100+"vw";
 
+heart.style.fontSize=
+(14+Math.random()*18)+"px";
 
-heart.style.fontSize =
-
-(14+
-Math.random()*18)+"px";
-
-
-heart.style.animationDuration =
-
-(4+
-Math.random()*5)+"s";
-
+heart.style.animationDuration=
+(4+Math.random()*5)+"s";
 
 document
 .getElementById("hearts")
 .appendChild(heart);
 
-
 setTimeout(()=>{
-
 heart.remove();
-
 },10000);
 
 }
 
-
-setInterval(
-createHeart,
-500
-);
-
+setInterval(createHeart,500);
 
 </script>
 
-
 </body>
-
 </html>
